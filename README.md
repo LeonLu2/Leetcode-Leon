@@ -1,2 +1,2 @@
 # Leetcode-Leon
-the repo for leetcode daily checkins and solutions history
+the repo for leetcode daily check-ins and solutions history
