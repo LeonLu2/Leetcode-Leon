@@ -35,3 +35,15 @@ class Solution {
         return right;
     }
 }
+
+// solution 2:
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return validBST(Long.MIN_VALUE, Long.MAX_VALUE, root);
+    }
+    boolean validBST(long lower, long upper, TreeNode root) {
+        if (root == null) return true;
+        if (root.val <= lower || root.val >= upper) return false;
+        return validBST(lower, root.val, root.left) && validBST(root.val, upper, root.right);
+    }
+}
